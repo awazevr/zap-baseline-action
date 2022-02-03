@@ -58,7 +58,7 @@ jobs:
           target: 'https://xxxxxxxxxx.xxx.xxxxxxx/swagger.json'
           issue_title: 'Name of ZAP Scan Report'
           fail_action: 'true'
-          rules_file_name: '.zap/rules.tsv' # << location of the rules file
+          rules_file_name: '.zap/rules.tsv' # << location of the rules file (in your branch)
 
 ```
 
