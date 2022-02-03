@@ -1,10 +1,10 @@
-# zap-scan-api-action
+# zap-baseline-action
 This is a GitHub Action meant to be used as a [composite action](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action) within an existing workflow. This action encapsulates setting up a checkout and zap scan in one step. 
 
 The action encapsulates the following other actions:
 
 - [actions/checkout](https://github.com/actions/checkout)
-- [zaproxy/action-api-scan](https://github.com/zaproxy/action-api-scan)
+- [zaproxy/action-baseline](https://github.com/zaproxy/action-baseline)
 
 
 ## Inputs
@@ -40,7 +40,7 @@ if it identifies any alerts. Set this option to `true` if you want to fail the s
 You can use this composite Action in your own workflow by adding:
 
 ```yml
-name: OWASP (Zap Scan)
+name: OWASP (Zap Baseline Scan)
 
 on:
   workflow_dispatch:
@@ -53,7 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout and Zap Scan
-        uses: awazevr/zap-scan-api-action@v1.0.1
+        uses: awazevr/zap-baseline-action@v1.0.1
         with:
           target: 'https://xxxxxxxxxx.xxx.xxxxxxx/swagger.json'
           issue_title: 'Name of ZAP Scan Report'
