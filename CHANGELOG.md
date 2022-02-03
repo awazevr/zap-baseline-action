@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/awazevr/zap-baseline-action/compare/v1.0.0...v1.0.1) (2022-02-03)
+
+
+### Bug Fixes
+
+* update readme ([249a0a5](https://github.com/awazevr/zap-baseline-action/commit/249a0a514cffca147794621feef7f8367a4efa88))
+
 # 1.0.0 (2022-02-03)
 
 
