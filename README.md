@@ -11,8 +11,7 @@ The action encapsulates the following other actions:
 
 ### `target`
 
-**Required** target API definition, OpenAPI or SOAP, local file or URL, e.g. https://www.example.com/openapi.json
-or target endpoint URL, GraphQL, e.g. https://www.example.com/graphql
+**Required** The URL of the web application to be scanned. This can be either a publicly available web application or a locally accessible URL.
 
 ### `rules_file_name`
 
@@ -53,9 +52,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout and Zap Scan
-        uses: awazevr/zap-baseline-action@v1.0.1
+        uses: awazevr/zap-baseline-action@v1.0.2
         with:
-          target: 'https://xxxxxxxxxx.xxx.xxxxxxx/swagger.json'
+          target: '{URL to be tested}'
           issue_title: 'Name of ZAP Scan Report'
           fail_action: 'true'
           rules_file_name: '.zap/rules.tsv' # << location of the rules file (in your branch)
